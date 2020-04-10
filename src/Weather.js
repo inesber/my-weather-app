@@ -63,15 +63,6 @@ export default function Weather() {
             </div>
           </div>
         </div>
-
-        <div className="footer">
-          <p>
-            <a href="https://github.com/inesber/my-weather-app" target="_blank">
-              Open-Source Code
-            </a>
-            by Inês Bernardino
-          </p>
-        </div>
       </div>
     </div>
   );

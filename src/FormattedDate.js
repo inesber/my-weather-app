@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FormatDate(props) {
   let months = [
     "January",
@@ -18,5 +16,6 @@ export default function FormatDate(props) {
   let day = props.date.getDate();
   let month = months[props.date.getMonth()];
   let year = props.date.getFullYear();
+
   return `${day} ${month} ${year}`;
 }

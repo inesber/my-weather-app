@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
 import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
 import axios from "axios";
@@ -38,39 +39,7 @@ export default function Weather(props) {
                     <FormattedHour hour={weatherData.hour} />
                   </li>
                 </ul>
-                <div className="inside-border">
-                  <div className="row">
-                    <div className="col-6">
-                      <img
-                        className="weather-icon"
-                        src={weatherData.icon}
-                        alt={weatherData.description}
-                      />
-                      <p className="weather-quote text-capitalize">
-                        {weatherData.description}
-                      </p>
-                    </div>
-
-                    <div className="col-6">
-                      <div className="current-temperature">
-                        {Math.round(weatherData.temperature)}ºC
-                      </div>
-
-                      <div className="wind-and-precipitation">
-                        <ul>
-                          <li>
-                            Wind:
-                            <span id="wind">{weatherData.wind}</span> km/h
-                          </li>
-                          <li>
-                            Humidity:
-                            <span id="humidity">{weatherData.humidity}</span>%
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <WeatherInfo data={weatherData} />
                 <div className="row">
                   <div className="col-12">
                     <form>

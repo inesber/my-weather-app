@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="inside-border">
+    <div className="WeatherInfo inside-border">
       <div className="row">
         <div className="col-6">
           <img

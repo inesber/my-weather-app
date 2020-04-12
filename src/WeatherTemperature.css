@@ -1,0 +1,22 @@
+a {
+  color: #648699;
+}
+
+a:hover {
+  color: #343a40;
+}
+
+.WeatherTemperature {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin: 10px 0 0;
+  font-size: 20px;
+}
+
+.unit {
+  font-size: 20px;
+  position: relative;
+  top: -18px;
+  font-family: "Montserrat", sans-serif;
+}

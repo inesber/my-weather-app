@@ -1,8 +1,21 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
+import FormattedHour from "./FormattedHour";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo inside-border">
+      <h1 className="current-city">{props.data.city}</h1>
+      <ul className="day-and-time">
+        <li className="date">
+          <FormattedDate date={props.data.date} />
+        </li>
+        <li className="hours">
+          {" "}
+          <FormattedHour hour={props.data.hour} />
+        </li>
+      </ul>
       <div className="row">
         <div className="col-6">
           <img
@@ -17,7 +30,7 @@ export default function WeatherInfo(props) {
 
         <div className="col-6">
           <div className="current-temperature">
-            {Math.round(props.data.temperature)}ºC
+            <WeatherTemperature celsius={props.data.temperature} />
           </div>
 
           <div className="wind-and-precipitation">

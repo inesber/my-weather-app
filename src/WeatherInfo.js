@@ -2,20 +2,21 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo inside-border">
       <h1 className="current-city">{props.data.city}</h1>
-      <ul className="day-and-time">
-        <li className="date">
+      <div className="day-and-time">
+        <p className="date">
           <FormattedDate date={props.data.date} />
-        </li>
-        <li className="hours">
+        </p>
+        <p className="hours">
           {" "}
           <FormattedHour hour={props.data.hour} />
-        </li>
-      </ul>
+        </p>
+      </div>
       <div className="row">
         <div className="col-6">
           <img
@@ -34,16 +35,16 @@ export default function WeatherInfo(props) {
           </div>
 
           <div className="wind-and-precipitation">
-            <ul>
-              <li>
+            <div>
+              <p>
                 Wind:
                 <span id="wind">{props.data.wind}</span> km/h
-              </li>
-              <li>
+              </p>
+              <p>
                 Humidity:
                 <span id="humidity">{props.data.humidity}</span>%
-              </li>
-            </ul>
+              </p>
+            </div>
           </div>
         </div>
       </div>

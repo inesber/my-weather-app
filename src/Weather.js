@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import FormattedDate from "./FormattedDate";
-import FormattedHour from "./FormattedHour";
+
 import axios from "axios";
 import "./Weather.css";
 
@@ -45,16 +44,6 @@ export default function Weather(props) {
           <div className="weather-app">
             <div className="row">
               <div className="col-12">
-                <h1 className="current-city">{weatherData.city}</h1>
-                <ul className="day-and-time">
-                  <li className="date">
-                    <FormattedDate date={weatherData.date} />
-                  </li>
-                  <li className="hours">
-                    {" "}
-                    <FormattedHour hour={weatherData.hour} />
-                  </li>
-                </ul>
                 <WeatherInfo data={weatherData} />
                 <div className="row">
                   <div className="col-12">

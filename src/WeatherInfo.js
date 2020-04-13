@@ -9,6 +9,7 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo inside-border">
       <h1 className="current-city">{props.data.city}</h1>
       <div className="day-and-time">
+        {" "}
         <p className="date">
           <FormattedDate date={props.data.date} />
         </p>
@@ -17,6 +18,7 @@ export default function WeatherInfo(props) {
           <FormattedHour hour={props.data.hour} />
         </p>
       </div>
+      <hr />
       <div className="row">
         <div className="col-6">
           <img
@@ -25,7 +27,7 @@ export default function WeatherInfo(props) {
             alt={props.data.description}
           />
           <p className="weather-quote text-capitalize">
-            {props.data.description}
+            <em>{props.data.description}</em>
           </p>
         </div>
 
